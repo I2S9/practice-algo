@@ -1,3 +1,5 @@
+"""Renvoie la taille de la liste = le nombre d'éléments"
+
 Algo longueur_liste(L : liste) : entier
     n : entier
     n <-- 0
@@ -8,6 +10,8 @@ Algo longueur_liste(L : liste) : entier
     renvoyer n
 finAlgo
 
+"""Forme récursive"
+
 Algo longueur_liste_rec(L : liste) : entier
     Si est_vide(L) alors
         renvoyer 0
@@ -15,6 +19,8 @@ Algo longueur_liste_rec(L : liste) : entier
         renvoyer 1 + longueur_liste_rec(suite(L))
     Finsi
 Finalgo
+
+"""Renvoie le ième élément de la liste"
 
 Algo ieme_element(i : entier, L : liste) : élément
     n <-- entier
