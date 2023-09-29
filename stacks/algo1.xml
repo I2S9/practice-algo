@@ -1,0 +1,18 @@
+Algo Algo(P1, P2, P3)
+  Tantque(non_est_vide(P1)) faire
+    (x,P1) <-- depiler(P1)
+    si(est_pair(x)) alors
+      P2 <-- empiler(x,P2)
+    sinon
+      P3 <-- empiler(x,P2)
+    finsi
+FinAlgo
+
+"""exercice-2"
+Algo vider_dans(P1,P2)
+  Tantque(non_est_vide(P1)) faire
+        (x,P1) <-- depiler(P1)
+        P2 <-- empiler(x,P2)
+  Fintantque
+FinAlgo
+
