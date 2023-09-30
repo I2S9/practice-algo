@@ -30,7 +30,59 @@ Algo algo3(p1,P2,P3)
           P1 <-- empiler(x,P1)
           (x,P3) <-- depiler(P3)
           P1 <-- empiler(x,P1)
-          
+          (x,P3) <-- depiler(P3)
+          P1 <-- empiler(x,P1)
+    FinTantque
+    vider_dans(P2,P1)
+    vider_dans(P3_P1)
+FinAlgo
+
+"""Either the function f: N --> n defined by f(n) = sum i=0 n i. Write a nonterminal recursive algorithm that computes f(n)"
+
+Algo algo1(n : eniter naturel) : entier naturel
+  Si(n=0) alors 
+    renvoyer 0
+  Sinon 
+    renvoyer(n + algo1(n-1))
+  Finsi
+FinAlgo
+
+"""Write a terminal recursive algorithm that computes f(n)"
+Algo algo_term(n : entier ) : entier
+  renvoyer algo_aux(n,0)
+FinAlgo
+
+Algo algo_aux(n : entier, acc : entier) : entier
+  Si(n=0) alors 
+    renvoyer acc
+  Sinon
+    renvoyer algo_aux(n-1, n+ acc)
+  Finsi
+FinAlgo
+
+"""Deduce an iterative algorithm that computes f(n)"
+Algo algo1_it(n : entier) : entier
+  acc  <-- 0
+  Tantque(n!=0) faire 
+    acc <-- n + acc
+    n <-- n-1
+  FinTantque
+  renvoyer acc
+FinAlgo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
