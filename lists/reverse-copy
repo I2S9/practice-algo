@@ -1,0 +1,15 @@
+Algo copie-inv(L1 : Liste) : Liste
+    L2 : Liste
+    L2 <-- liste_vide()
+    tantque(non(est_vide(L1)) faire
+        L2 <-- ajouter(premier(L1),L2)
+        L1 <-- suite(L1)
+    fintantque
+    renvoyer L2
+Finalgo
+
+""copie simple"
+
+Algo copie(L1 : Liste) : Liste
+    renvoyer copie-inv(copie-inv(L1))
+FinAlgo
