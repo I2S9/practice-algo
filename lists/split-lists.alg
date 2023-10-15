@@ -1,0 +1,29 @@
+Algo scinder(L : Liste) : (L1,L2)
+    L1, L2 : Liste
+    L1 <--liste_vide()
+    L2 <--liste_vide()
+    i : entier
+    i <-- 1
+    Tantque(non(est_vide(L))) faire
+        Si(i % 2 == 1) alors
+            L1 <-- ajouter(premier(L),L1)
+        Sinon
+            L2 <-- ajouter(premier(L),L2)
+        Finsi
+        L <-- suite(L)
+        i <-- i + 1
+    fintantque
+    renvoyer (L1,L2)
+Finalgo
+
+Algo scinder(L : Liste)
+    L1 <- liste_vide()
+    L2 <- liste_vide()
+    Tantque(non(est_vide(L))) faire
+        L1 <- ajouter(premier(L),L1)
+        L <- suite(L)
+        L2 <- ajouter(premier(L),L1)
+        L <- suite(L)
+    Fintantque
+Finalgo
+
