@@ -8,8 +8,14 @@ Algo copie-inv(L1 : Liste) : Liste
     renvoyer L2
 Finalgo
 
-""copie simple"
-
 Algo copie(L1 : Liste) : Liste
     renvoyer copie-inv(copie-inv(L1))
 FinAlgo
+
+Algo copie_inv_rec(L : Liste, L1 : Liste): Liste
+    Si(est_vide(L)) alors
+        renvoyer L1
+    Sinon
+        renvoyer copie_inv(suite(L), ajouter(premier(L), L1))
+    Finsi
+Finalgo
