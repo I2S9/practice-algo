@@ -1,0 +1,14 @@
+Algo inverser_tableau(T : Tableau):Tableau
+    i,j : entier
+    i <- indice_debut(T)
+    j <- indice_fin(T)
+    Tantque(i<j) faire
+        x <- T[i]
+        T[i] <- T[j]
+        T[j] <- x
+        i <- i + 1
+        j <- j - 1
+    FIntantque
+Finalgo
+
+
