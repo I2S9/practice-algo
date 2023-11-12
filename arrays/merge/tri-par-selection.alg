@@ -1,4 +1,5 @@
-Algo tri_selection(T : Tableau, n : entier)
+Algo tri_selection(T : Tableau, n : entier) --n correspond à la taille du tableau
+    n <- indice_fin(T)+indice_debut(T)+1
     Pour i allant de 0 à n-2 par pas de 1 faire
         min <- i
         Pour j allant de i+1 à n-1 par pas de 1 faire
