@@ -52,3 +52,58 @@ Algo fusionner(T : Tableau, g : entier, m : entier, d : entier)
         i <- i+1
     fintantque
 FinAlgo
+
+-- Tri fusion avec la taille du tableau
+
+Algo tri_fusion(T : Tableau, n : entier)
+    tri_fusion_bis(T, 0, n-1)
+FinAlgo
+
+Algo tri_fusion_bis(T : Tableau, g : entier, d : entier)
+    Si (g < d) alors
+        m <- (g + d) / 2
+        tri_fusion_bis(T, g, m)
+        tri_fusion_bis(T, m+1, d)
+        fusionner(T, g, m, d)
+    Finsi
+FinAlgo
+
+Algo fusionner(T : Tableau, g : entier, m : entier, d : entier)
+    Créer un tableau temporaire aux de taille d-g+1
+    i <- g, j <- m+1, k <- 0
+
+    Tantque (i <= m et j <= d) faire
+        Si (T[i] <= T[j]) alors
+            aux[k] <- T[i]
+            i <- i + 1
+        Sinon
+            aux[k] <- T[j]
+            j <- j + 1
+        Finsi
+        k <- k + 1
+    Fintantque
+
+    Tantque (i <= m) faire
+        aux[k] <- T[i]
+        i <- i + 1
+        k <- k + 1
+    Fintantque
+
+    Tantque (j <= d) faire
+        aux[k] <- T[j]
+        j <- j + 1
+        k <- k + 1
+    Fintantque
+
+    Pour i allant de 0 à k-1
+        T[g + i] <- aux[i]
+    Finpour
+FinAlgo
+
+
+
+
+
+
+
+
