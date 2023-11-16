@@ -11,7 +11,8 @@ Finalgo
 
 -- Version corrigée en classe 
 
--- Version récursive
+1.Version récursive terminale
+
 Algo existe(e : element, x : Arbre): Booléen
     Si(non(est_vide(x))) alors
         Si(e = racine(x)) alors
@@ -27,3 +28,16 @@ Algo existe(e : element, x : Arbre): Booléen
        renvoyer Faux
     Finsi
 FinAlgo
+
+-- Version itérative 
+
+Algo existe_iter(e : élement, x : Arbre): Booléen
+    Tantque(non(est_vide(x)) et (e != racine(x))) faire
+        Si(e<racine(x)) alors
+            x <- gauche
+        Sinon
+            x <- droite
+        Finsi
+    Fintantque
+    renvoyer(non(est_vide(x)))
+Finalgo
