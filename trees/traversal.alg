@@ -1,3 +1,5 @@
+-- Parcours en profondeur(préfixe, infixe, suffixe)
+
 Algo parcours_prefixe(A : Arbre)
     Si(non(est_vide(A))) alors
         afficher(racine(A))
@@ -22,7 +24,7 @@ Algo parcours_suffixe(A : Arbre)
     Finsi
 FinAlgo
 
--- 2
+-- Parcours en largeur
 
 Algo afficher_largeur_sous_arbres(A: Arbre)
     Si(non(est_vide(A))) alors
@@ -42,6 +44,19 @@ Algo afficher_largeur(A : Arbre)
         afficher(racine(A))
         afficher_largeur_sous_arbres(A)
     Finsi
+Finalgo
+
+-- Version corrigée (à l'aide d'une FILE)
+
+Algo parcours_largeur(a : Arbre)
+    F <- creer_file()
+    F <- enfiler(x,F)
+    Tantque(non(est_vide(f))) faire
+        (x,F) <- defiler(F)
+        Afficher racine(x)
+        F <- enfiler(gauche(x),F)
+        F <- enfiler(droit(x),F)
+    Fintantque
 Finalgo
 
 
