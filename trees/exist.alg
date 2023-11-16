@@ -8,3 +8,21 @@ Algo existe(e : élément, x : Arbre): Boolean
     Fintantque
     renvoyer(non(est_vide(x)))
 Finalgo
+
+-- Version corrigée en classe 
+
+Algo existe(e : element, x : Arbre): Booléen
+    Si(non(est_vide(x))) alors
+        Si(e = racine(x)) alors
+            renvoyer Vrai
+        Sinon
+            Si(e<racine(x)) alors
+                renvoyer (e,gauche(x))
+            Sinon
+                renvoyer(e,droit(x))
+            Finsi
+        Finsi
+    Sinon
+       renvoyer Faux
+    Finsi
+FinAlgo
