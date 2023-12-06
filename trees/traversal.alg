@@ -48,7 +48,7 @@ Finalgo
 
 -- Version corrigée (à l'aide d'une FILE)
 
-Algo parcours_largeur(a : Arbre)
+Algo parcours_largeur(x: Arbre)
     F <- creer_file()
     F <- enfiler(x,F)
     Tantque(non(est_vide(f))) faire
